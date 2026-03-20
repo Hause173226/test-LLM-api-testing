@@ -11,7 +11,18 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.get("/api-docs/swagger.json", (_req, res) => {
+  res.json(swaggerDocument);
+});
+
+app.use(
+  "/api-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(null, {
+    explorer: true,
+    swaggerUrl: "/api-docs/swagger.json",
+  }),
+);
 app.use("/api", apiRoutes);
 
 app.use((_req, _res, next) => {
