@@ -315,7 +315,6 @@
       "post": {
         "tags": ["Categories"],
         "summary": "Create category",
-        "security": [{ "bearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -329,9 +328,6 @@
         "responses": {
           "201": {
             "description": "Category created"
-          },
-          "401": {
-            "description": "Unauthorized"
           }
         }
       }
@@ -340,7 +336,6 @@
       "put": {
         "tags": ["Categories"],
         "summary": "Update category",
-        "security": [{ "bearerAuth": [] }],
         "parameters": [
           {
             "name": "id",
@@ -364,16 +359,12 @@
         "responses": {
           "200": {
             "description": "Category updated"
-          },
-          "401": {
-            "description": "Unauthorized"
           }
         }
       },
       "delete": {
         "tags": ["Categories"],
         "summary": "Delete category",
-        "security": [{ "bearerAuth": [] }],
         "parameters": [
           {
             "name": "id",
@@ -387,9 +378,6 @@
         "responses": {
           "200": {
             "description": "Category deleted"
-          },
-          "401": {
-            "description": "Unauthorized"
           }
         }
       }
@@ -407,7 +395,6 @@
       "post": {
         "tags": ["Products"],
         "summary": "Create product",
-        "security": [{ "bearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
@@ -421,9 +408,6 @@
         "responses": {
           "201": {
             "description": "Product created"
-          },
-          "401": {
-            "description": "Unauthorized"
           }
         }
       }
@@ -432,7 +416,6 @@
       "put": {
         "tags": ["Products"],
         "summary": "Update product",
-        "security": [{ "bearerAuth": [] }],
         "parameters": [
           {
             "name": "id",
@@ -456,16 +439,12 @@
         "responses": {
           "200": {
             "description": "Product updated"
-          },
-          "401": {
-            "description": "Unauthorized"
           }
         }
       },
       "delete": {
         "tags": ["Products"],
         "summary": "Delete product",
-        "security": [{ "bearerAuth": [] }],
         "parameters": [
           {
             "name": "id",
@@ -479,9 +458,6 @@
         "responses": {
           "200": {
             "description": "Product deleted"
-          },
-          "401": {
-            "description": "Unauthorized"
           }
         }
       }
